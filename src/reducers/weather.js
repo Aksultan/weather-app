@@ -1,8 +1,11 @@
-import { GET_WEATHER } from '../types'
-export default (state = [], action = {}) => {
+import { GET_WEATHER, SET_WEATHER } from '../types'
+
+export default (state = {}, action) => {
   switch (action.type) {
+    case SET_WEATHER:
+      return action.payload
     case GET_WEATHER:
-      return state.weather
+      return state
     default:
       return state
   }

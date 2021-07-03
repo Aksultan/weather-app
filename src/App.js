@@ -1,10 +1,9 @@
 import './App.scss'
+import WeatherContainer from './components/pages/Weather/WeatherContainer'
 
 function App () {
   return (
-    <div className="App bg-blue-400">
-
-    </div>
+    <WeatherContainer/>
   )
 }
 
