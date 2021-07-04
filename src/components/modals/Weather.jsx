@@ -1,17 +1,19 @@
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { getWeather } from '../../actions/weather'
-
+// import cloudy from '../../../public/weather-svg/cloudy-day-1.svg'
 const Weather = ({ weather, getWeather, ...props }) => {
   useEffect(() => {
-    getWeather('Moscow')
+    getWeather('Токио')
     console.log(weather)
   }, [])
-
   return (
-    <div className="weather-card">
-
-    </div>
+    <>
+      {weather &&
+        <div className="weather-card rounded-xl bg-black-800 w-64">
+          <img alt={'/weather-svg/cloudy-day-1.svg'} src={'/weather-svg/cloudy-day-1.svg'} />
+        </div>}
+    </>
   )
 }
 

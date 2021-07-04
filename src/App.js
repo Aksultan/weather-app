@@ -3,7 +3,9 @@ import WeatherContainer from './components/pages/Weather/WeatherContainer'
 
 function App () {
   return (
-    <WeatherContainer/>
+    <div className="flex justify-center h-screen">
+      <WeatherContainer/>
+    </div>
   )
 }
 
