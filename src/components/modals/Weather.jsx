@@ -5,7 +5,6 @@ import { getAllWeather } from '../../actions/weather'
 const Weather = ({ data, getAllWeather, cities, ...props }) => {
   useEffect(() => {
     getAllWeather(cities)
-    console.log(data)
   }, [cities])
   return (
     <>

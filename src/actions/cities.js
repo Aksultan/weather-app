@@ -1,4 +1,4 @@
-import { SET_CITY } from '../types'
+import { DELETE_CITY, SET_CITY } from '../types'
 
 const getCityIdByName = async (cityName) => {
   return await fetch('./city.list.min.json').then(res => res.json()).then(json => {
@@ -18,3 +18,8 @@ export const setCity = (cityName) => async (dispatch) => {
     city: { name: cityName, id }
   }))
 }
+
+export const deleteCity = (id) => ({
+  type: DELETE_CITY,
+  id
+})
