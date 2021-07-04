@@ -6,7 +6,7 @@ export default {
   weather: {
     getWeather: async (cityName) => {
       return await axios
-        .get(`${BASE_URL}?q=${cityName}&appid=${API_KEY}&lang=en`)
+        .get(`${BASE_URL}?q=${cityName}&appid=${API_KEY}&lang=en&units=metric`)
         .then((res) => {
           if (res && res.data) return res.data
         })
