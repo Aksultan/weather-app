@@ -5,15 +5,25 @@ import { getAllWeather } from '../../actions/weather'
 const Weather = ({ data, getAllWeather, cities, ...props }) => {
   useEffect(() => {
     getAllWeather(cities)
+    console.log(data)
   }, [cities])
   return (
     <>
       {data.list &&
         data.list.map((city, index) =>
-          <div className={`weather-card rounded-xl w-full p-5 h-fit-content ${city.weather && city.weather[0].icon.slice(-1) === 'd' ? 'bg-white' : 'bg-black text-white'}`} key={index}>
-            <h3 className="text-center font-bold font-xl mb-5">{city.name}, {city.sys && city.sys.country}</h3>
-            <h2 className="font-semi text-5xl text-center">{city.main && Math.round(city.main.temp)}&#8451;</h2>
-            <div className="weather flex wrap justify-center p-5">
+          <div className={`weather-card rounded-xl w-auto p-5 h-fit-content ${city.weather[0]?.icon.slice(-1) === 'd' ? 'bg-white' : 'bg-black text-white'}`} key={index}>
+            <div className="flex flex-col justify-center">
+              <h3 className="text-center font-bold text-xl mb-5 min-w-1/4">{city.name}, {city.sys?.country}</h3>
+            </div>
+            <div className="flex justify-center flex-row-reverse items-center gap-5 font-medium">
+              <div className="flex flex-col">
+                <h5>Humidity: {city.main?.humidity}%</h5>
+                <h5>Wind: {city.wind?.speed} km/h</h5>
+                <h5>Feels: {Math.round(city.main?.feels_like)}&#8451;</h5>
+              </div>
+              <h2 className="font-semi text-5xl text-center">{Math.round(city.main?.temp)}&#8451;</h2>
+            </div>
+            <div className="weather flex wrap justify-center p-3">
               {city.weather &&
                 city.weather.map((weatherState, index) =>
                   <div className="rounded-md p-2" key={index}>

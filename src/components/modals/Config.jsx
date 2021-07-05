@@ -10,7 +10,7 @@ const Config = ({ cities, setCity, deleteCity, isVisible, ...props }) => {
     deleteCity(id)
   }
   return (
-    <div className={`bg-white absolute p-5 top-0 duration-700 w-full ${isVisible ? 'right-0 opacity-100' : '-right-full opacity-0'}`}>
+    <div className={`bg-white flex flex-col justify-between absolute p-5 top-0 z-10 duration-700 h-auto w-full ${isVisible ? 'right-0 opacity-100' : '-right-full opacity-0'}`}>
       <h3>Settings</h3>
       <ul>
         {cities && cities.map((city, index) =>
@@ -29,8 +29,8 @@ const Config = ({ cities, setCity, deleteCity, isVisible, ...props }) => {
           </li>
         )}
       </ul>
-      <form action="post" onSubmit={(e) => handleSubmit(e)}>
-        <input placeholder="Enter city name" type="text"/>
+      <form action="post" className="flex justify-center" onSubmit={(e) => handleSubmit(e)}>
+        <input className="pr-2 focus:outline-none" placeholder="Enter city name" type="text"/>
         <button type="submit">Add city</button>
       </form>
     </div>

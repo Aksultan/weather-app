@@ -8,7 +8,6 @@ export const setWeather = (data) => ({
 
 export const getAllWeather = (cityNames) => (dispatch) => {
   const cityNamesParsed = cityNames?.map(city => city.id).join(',') || 1850147
-  console.log(cityNamesParsed)
   return api.weather.getAllWeather(cityNamesParsed).then(res => {
     dispatch(setWeather(res))
   }).catch(err => console.error(err))
