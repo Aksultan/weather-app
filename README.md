@@ -13,7 +13,7 @@ DO NOT FORGET TO PROVIDE API KEY!
 
 ![4](https://user-images.githubusercontent.com/22559218/124574273-1e3bc580-de6c-11eb-8c21-2983b0900993.gif)
 
-## Background changes according to the cities current time (white for day and black for night)
+## Background changes according to the cities current time (day-white/night-black)
 ![3](https://user-images.githubusercontent.com/22559218/124572802-c2bd0800-de6a-11eb-85ed-a059569f4a77.gif)
 
 
