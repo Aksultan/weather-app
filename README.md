@@ -7,14 +7,13 @@ DO NOT FORGET TO PROVIDE API KEY!
 
 ## Shows weather for the selected cities (default is Tokyo)
 
-![1](https://user-images.githubusercontent.com/22559218/124573361-4aa31200-de6b-11eb-91eb-584722040b5b.gif)
+![2](https://user-images.githubusercontent.com/22559218/124574586-6d81f600-de6c-11eb-9fd4-4471ef22340c.gif)
 
 ## Cities can be changed in the settings
 
 ![4](https://user-images.githubusercontent.com/22559218/124574273-1e3bc580-de6c-11eb-8c21-2983b0900993.gif)
 
 ## Background changes according to the cities current time (white for day and black for night)
-![2](https://user-images.githubusercontent.com/22559218/124574586-6d81f600-de6c-11eb-9fd4-4471ef22340c.gif)
 ![3](https://user-images.githubusercontent.com/22559218/124572802-c2bd0800-de6a-11eb-85ed-a059569f4a77.gif)
 
 
